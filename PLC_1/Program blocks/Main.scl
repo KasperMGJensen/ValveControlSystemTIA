@@ -4,14 +4,7 @@ TITLE = "Main Program Sweep (Cycle)"
 VERSION : 0.1
 
 BEGIN
-	"Bottom_Valve_Control"(Closed:="BottomValveClosed",
-	                       Open:="BottomValveOpen",
-	                       OpenValve:="OpenBottomValve",
-	                       Actuator=>"BottomValveActuator");
-	
-	"Top_Valve_Control"(Closed := "TopValveClosed",
-	                    Open := "TopValveOpen",
-	                    OpenValve := "OpenTopValve",
-	                    Actuator => "TopValveActuator");
+	"Bottom_Valve_Control"(OpenValve := "OpenBottomValve");
+	"Top_Valve_Control"(OpenValve := "OpenTopValve");
 END_ORGANIZATION_BLOCK
 

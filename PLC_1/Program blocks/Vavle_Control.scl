@@ -12,6 +12,14 @@ VERSION : 0.1
       State : String;
    END_VAR
 
+   VAR 
+      OldOpenValve : Bool;
+   END_VAR
+
+   VAR CONSTANT 
+      MAX_FB_TIME : Time := T#30s;
+   END_VAR
+
 
 BEGIN
 	IF #OpenValve
@@ -21,6 +29,14 @@ BEGIN
 	    #Actuator := FALSE;
 	END_IF;
 	
+	IF #OldOpenValve <> #OpenValve
+	THEN
+	    "Feedback timer".TON(IN := FALSE,
+	                         PT := #MAX_FB_TIME);
+	END_IF;
+	#OldOpenValve := #OpenValve;
+	
+	
 	IF #Open AND NOT #Closed
 	THEN
 	    #State := 'Open';
@@ -28,7 +44,14 @@ BEGIN
 	THEN
 	    #State := 'Closed';
 	ELSE
-	    #State := 'Changing';
+	    IF "Feedback timer".Q
+	    THEN
+	        #State := 'Error';
+	    ELSE
+	        "Feedback timer".TON(IN := TRUE,
+	                             PT := #MAX_FB_TIME);
+	        #State := 'Changing';
+	    END_IF;
 	END_IF;
 	
 	    

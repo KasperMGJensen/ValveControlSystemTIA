@@ -9,8 +9,8 @@
       <SW.Tags.PlcTag ID="1" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.0</LogicalAddress>
-          <Name>BottomValveOpen</Name>
+          <LogicalAddress>%M0.0</LogicalAddress>
+          <Name>OpenBottomValve</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="2" CompositionName="Comment">
@@ -28,127 +28,13 @@
       <SW.Tags.PlcTag ID="4" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.1</LogicalAddress>
-          <Name>BottomValveClosed</Name>
+          <LogicalAddress>%M0.1</LogicalAddress>
+          <Name>OpenTopValve</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="5" CompositionName="Comment">
             <ObjectList>
               <MultilingualTextItem ID="6" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="7" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.2</LogicalAddress>
-          <Name>OpenBottomValve</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="8" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="9" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="A" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%Q8.0</LogicalAddress>
-          <Name>BottomValveActuator</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="B" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="C" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="D" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.3</LogicalAddress>
-          <Name>TopValveOpen</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="E" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="F" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="10" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.4</LogicalAddress>
-          <Name>TopValveClosed</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="11" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="12" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="13" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%I8.5</LogicalAddress>
-          <Name>OpenTopValve</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="14" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="15" CompositionName="Items">
-                <AttributeList>
-                  <Culture>en-US</Culture>
-                  <Text />
-                </AttributeList>
-              </MultilingualTextItem>
-            </ObjectList>
-          </MultilingualText>
-        </ObjectList>
-      </SW.Tags.PlcTag>
-      <SW.Tags.PlcTag ID="16" CompositionName="Tags">
-        <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%Q8.1</LogicalAddress>
-          <Name>TopValveActuator</Name>
-        </AttributeList>
-        <ObjectList>
-          <MultilingualText ID="17" CompositionName="Comment">
-            <ObjectList>
-              <MultilingualTextItem ID="18" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />

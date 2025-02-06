@@ -16,7 +16,9 @@
     <Member Name="State" Datatype="String" />
   </Section>
   <Section Name="InOut" />
-  <Section Name="Static" />
+  <Section Name="Static">
+    <Member Name="OldOpenValve" Datatype="Bool" />
+  </Section>
 </Sections></Interface>
       <Name>Bottom_Valve_Control</Name>
       <Namespace />
