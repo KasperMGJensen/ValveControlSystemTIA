@@ -10,6 +10,7 @@ VERSION : 0.1
    VAR_OUTPUT 
       Actuator : Bool;
       State : String;
+      StateNum : Int;
    END_VAR
 
    VAR 
@@ -40,17 +41,21 @@ BEGIN
 	IF #Open AND NOT #Closed
 	THEN
 	    #State := 'Open';
+	    #StateNum := 1;
 	ELSIF NOT #Open AND #Closed
 	THEN
 	    #State := 'Closed';
+	    #StateNum := 0;
 	ELSE
 	    IF "Feedback timer".Q
 	    THEN
 	        #State := 'Error';
+	        #StateNum := 4;
 	    ELSE
 	        "Feedback timer".TON(IN := TRUE,
 	                             PT := #MAX_FB_TIME);
 	        #State := 'Changing';
+	        #StateNum := 2;
 	    END_IF;
 	END_IF;
 	

@@ -14,6 +14,7 @@
   <Section Name="Output">
     <Member Name="Actuator" Datatype="Bool" />
     <Member Name="State" Datatype="String" />
+    <Member Name="StateNum" Datatype="Int" />
   </Section>
   <Section Name="InOut" />
   <Section Name="Static">
