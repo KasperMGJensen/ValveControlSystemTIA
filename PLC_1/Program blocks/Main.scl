@@ -1,0 +1,17 @@
+﻿ORGANIZATION_BLOCK "Main"
+TITLE = "Main Program Sweep (Cycle)"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	"Bottom_Valve_Control"(Closed:="BottomValveClosed",
+	                       Open:="BottomValveOpen",
+	                       OpenValve:="OpenBottomValve",
+	                       Actuator=>"BottomValveActuator");
+	
+	"Top_Valve_Control"(Closed := "TopValveClosed",
+	                    Open := "TopValveOpen",
+	                    OpenValve := "OpenTopValve",
+	                    Actuator => "TopValveActuator");
+END_ORGANIZATION_BLOCK
+
