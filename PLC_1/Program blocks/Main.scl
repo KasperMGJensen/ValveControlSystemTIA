@@ -4,7 +4,10 @@ TITLE = "Main Program Sweep (Cycle)"
 VERSION : 0.1
 
 BEGIN
-	"Bottom_Valve_Control"(OpenValve := "OpenBottomValve");
-	"Top_Valve_Control"(OpenValve := "OpenTopValve");
+	"Tank_Control_DB"(Empty:="Empty_tank",
+	                  Fill:="Fill_tank",
+	                  BottomDrySensor:="BottomDrySensor",
+	                  TopDrySensor:="TopDrySensor");
+	
 END_ORGANIZATION_BLOCK
 

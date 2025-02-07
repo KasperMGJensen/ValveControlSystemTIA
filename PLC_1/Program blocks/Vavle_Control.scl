@@ -15,6 +15,7 @@ VERSION : 0.1
 
    VAR 
       OldOpenValve : Bool;
+      "Feedback timer" {InstructionName := 'IEC_TIMER'; LibVersion := '1.0'} : IEC_TIMER;
    END_VAR
 
    VAR CONSTANT 
@@ -32,8 +33,7 @@ BEGIN
 	
 	IF #OldOpenValve <> #OpenValve
 	THEN
-	    "Feedback timer".TON(IN := FALSE,
-	                         PT := #MAX_FB_TIME);
+	    RESET_TIMER(#"Feedback timer");
 	END_IF;
 	#OldOpenValve := #OpenValve;
 	
@@ -47,17 +47,19 @@ BEGIN
 	    #State := 'Closed';
 	    #StateNum := 0;
 	ELSE
-	    IF "Feedback timer".Q
+	    IF #"Feedback timer".Q
 	    THEN
 	        #State := 'Error';
 	        #StateNum := 4;
 	    ELSE
-	        "Feedback timer".TON(IN := TRUE,
+	        #"Feedback timer".TON(IN := TRUE,
 	                             PT := #MAX_FB_TIME);
 	        #State := 'Changing';
 	        #StateNum := 2;
 	    END_IF;
+	    
 	END_IF;
+	
 	
 	    
 END_FUNCTION_BLOCK
